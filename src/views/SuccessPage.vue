@@ -20,7 +20,7 @@ const goHome = () => {
       <div class="success-footer">
         <p>A confirmation email has been sent to your email address.</p>
         <p>
-          If you have any questions, please contact
+          If you have any questions, please contact:
           <a href="https://www.usps.com/help/contact-us.htm">USPS Customer Service</a>.
         </p>
       </div>
