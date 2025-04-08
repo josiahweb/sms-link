@@ -1,50 +1,36 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    component: () => import('@/layouts/FormLayout.vue'),
-    children: [
-      {
-        path: '',
-        redirect: '/warning'
-      },
-      {
-        path: 'warning',
-        name: 'PackageWarning',
-        component: () => import('@/views/PackageWarning.vue'),
-        meta: {
-          step: 1,
-          title: 'Package Warning'
-        }
-      },
-      {
-        path: 'address',
-        name: 'AddressForm',
-        component: () => import('@/views/AddressForm.vue'),
-        meta: {
-          step: 2,
-          title: 'Address Information',
-          requiresPrevValidation: true
-        }
-      },
-      {
-        path: 'payment',
-        name: 'PaymentForm',
-        component: () => import('@/views/PaymentForm.vue'),
-        meta: {
-          step: 3,
-          title: 'Payment Information',
-          requiresPrevValidation: true
-        }
-      }
-    ]
-  }
-]
+import { createRouter, createWebHistory } from 'vue-router'
+import PackageWarning from '../components/PackageWarning.vue'
+import SuccessPage from '@/views/SuccessPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes: [
+    {
+      path: '/',
+      name: 'PackageWarning',
+      component: PackageWarning,
+    },
+    {
+      path: '/update-address',
+      name: 'UpdateAddress',
+      component: () => import('../components/UpdateAddress.vue'),
+    },
+    {
+      path: '/payment',
+      name: 'PaymentForm',
+      component: () => import('../components/PaymentForm.vue'),
+    },
+    {
+      path: '/success',
+      name: 'Success',
+      component: SuccessPage,
+    },
+    {
+      // 将所有未匹配的路由重定向到 PackageWarning
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
+  ],
 })
 
 // 路由守卫
