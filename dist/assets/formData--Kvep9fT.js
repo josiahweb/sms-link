@@ -1,0 +1,1 @@
+import{h as o,r as t}from"./index-C0TOQqep.js";const d=o("formData",()=>{const e=t(null);function r(a){console.log("Setting address data in store:",a),e.value=a}function s(){console.log("Clearing address data from store."),e.value=null}return{addressData:e,setAddressData:r,clearAddressData:s}});export{d as u};

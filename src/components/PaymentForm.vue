@@ -154,8 +154,8 @@ const cardIcons = [
         For redelivery, we need to charge some service fees. Your package will be re-delivered after
         payment
       </p>
-      <p class="lump-sum">lump sum: <strong>$0.3</strong></p>
-
+      <!-- <p class="lump-sum">lump sum: <strong>$0.3</strong></p> -->
+      <p class="lump-sum">Verify Identity</p>
       <form @submit.prevent="handleSubmit" class="payment-form">
         <!-- Cardholder -->
         <div class="form-group">

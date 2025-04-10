@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import QuickToolsDropdown from '@/components/QuickToolsDropdown.vue'
+import SendDropdown from '@/components/SendDropdown.vue'
+import ReceiveDropdown from '@/components/ReceiveDropdown.vue'
+import ShopDropdown from '@/components/ShopDropdown.vue'
+import BusinessDropdown from '@/components/BusinessDropdown.vue'
 </script>
 
 <template>
@@ -75,276 +80,25 @@ import { RouterView } from 'vue-router'
         </div>
         <nav class="nav-container">
           <ul class="nav-list">
-            <li href="#" class="qt-nav menuheader" style="width: 14%">
+            <li class="qt-nav menuheader" style="width: 14%">
               <a class="nav-first-element header">Quick Tools</a>
-              <div class="quick-tools-dropdown">
-                <div class="tools-grid">
-                  <!-- 第一行 -->
-                  <a href="https://tools.usps.com/go/TrackConfirmAction_input" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/19.svg"
-                      alt="Track a Package"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Track a Package</p>
-                  </a>
-                  <a href="https://informeddelivery.usps.com/" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/6.svg"
-                      alt="Informed Delivery"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Informed Delivery</p>
-                  </a>
-                  <a href="https://tools.usps.com/find-location.htm" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/5.svg"
-                      alt="Find USPS Locations"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Find USPS Locations</p>
-                  </a>
-                  <a
-                    href="https://store.usps.com/store/browse/category.jsp?categoryId=buy-stamps"
-                    class="tool-item"
-                  >
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/9.svg"
-                      alt="Buy Stamps"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Buy Stamps</p>
-                  </a>
-
-                  <!-- 第二行 -->
-                  <a href="https://tools.usps.com/schedule-pickup-steps.htm" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/11.svg"
-                      alt="Schedule a Pickup"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Schedule a Pickup</p>
-                  </a>
-                  <a href="https://postcalc.usps.com/" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/10.svg"
-                      alt="Calculate a Price"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Calculate a Price</p>
-                  </a>
-                  <a href="https://tools.usps.com/zip-code-lookup.htm" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/12.svg"
-                      alt="Look Up a ZIP Code"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Look Up a ZIP Code</p>
-                  </a>
-                  <a href="https://holdmail.usps.com/holdmail/" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/22.svg"
-                      alt="Hold Mail"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Hold Mail</p>
-                  </a>
-
-                  <!-- 第三行 -->
-                  <a href="https://moversguide.usps.com/?referral=MG82" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/23.svg"
-                      alt="Change My Address"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Change My Address</p>
-                  </a>
-                  <a href="#" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/24.svg"
-                      alt="Rent/Renew a PO Box"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Rent/Renew a PO Box</p>
-                  </a>
-                  <a href="https://www.usps.com/manage/po-boxes.htm" class="tool-item">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/13.svg"
-                      alt="Free Boxes"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Free Boxes</p>
-                  </a>
-                  <a
-                    href="https://store.usps.com/store/results/free-shipping-supplies/shipping-supplies/_/N-alnx4jZ7d0v8v"
-                    class="tool-item"
-                  >
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/46.svg"
-                      alt="Click-N-Ship"
-                      class="tool-icon"
-                    />
-                    <p class="tool-title">Click-N-Ship</p>
-                  </a>
-                </div>
-              </div>
+              <QuickToolsDropdown />
             </li>
-            <li href="https://www.usps.com/ship/" class="menuheader" style="width: 11%">
+            <li class="menuheader" style="width: 11%">
               <a class="header">Send</a>
-              <div class="repos ODc1MDA MjkwMA">
-                <ul role="menu" aria-hidden="true" class="tools MjI5MDA">
-                  <h3>Tools</h3>
-                  <li>
-                    <a href="https://cns.usps.com/" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/assets/23edd9acTeKnX.svg"
-                        alt="Click-N-Ship"
-                      />Click-N-Ship</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://store.usps.com/store/" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/9.svg"
-                        alt="Stamps & Supplies"
-                      />Stamps & Supplies</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://tools.usps.com/zip-code-lookup.htm" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/12.svg"
-                        alt="Look Up a ZIP Code"
-                      />Look Up a ZIP Code™</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://postcalc.usps.com/" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/10.svg"
-                        alt="Calculate a Price"
-                      />Calculate a Price</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://tools.usps.com/schedule-pickup-steps.htm" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/11.svg"
-                        alt="Schedule a Pickup"
-                      />Schedule a Pickup</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://tools.usps.com/find-location.htm" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/5.svg"
-                        alt="Find USPS Locations"
-                      />Find USPS Locations</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://tools.usps.com/go/TrackConfirmAction_input" class="tool-link"
-                      ><img
-                        src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/19.svg"
-                        alt="Tracking"
-                      />Tracking</a
-                    >
-                  </li>
-                </ul>
-                <ul role="menu" aria-hidden="true">
-                  <h3>Learn About</h3>
-                  <li><a href="https://www.usps.com/ship/">Sending</a></li>
-                  <ul class="send-menu">
-                    <li><a href="https://www.usps.com/ship/letters.htm">Sending Mail</a></li>
-                    <li><a href="https://www.usps.com/ship/packages.htm">Sending Packages</a></li>
-                    <li>
-                      <a href="https://www.usps.com/ship/insurance-extra-services.htm"
-                        >Insurance & Extra Services</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://www.usps.com/ship/shipping-restrictions.htm"
-                        >Shipping Restrictions</a
-                      >
-                    </li>
-                  </ul>
-                  <li>
-                    <a href="https://www.usps.com/ship/online-shipping.htm">Online Shipping</a>
-                  </li>
-                  <li><a href="https://www.usps.com/business/label-broker.htm">Label Broker</a></li>
-                  <li>
-                    <a href="https://www.usps.com/ship/custom-mail.htm"
-                      >Custom Mail, Cards, & Envelopes</a
-                    >
-                  </li>
-                  <li><a href="https://www.usps.com/business/prices.htm">Postage Prices</a></li>
-                </ul>
-                <ul role="menu" aria-hidden="true">
-                  <h3 class="desktop-only">&nbsp;</h3>
-                  <li>
-                    <a href="https://www.usps.com/ship/mail-shipping-services.htm"
-                      >Mail & Shipping Services</a
-                    >
-                  </li>
-                  <ul class="send-menu">
-                    <li>
-                      <a href="https://www.usps.com/ship/priority-mail-express.htm"
-                        >Priority Mail Express</a
-                      >
-                    </li>
-                    <li><a href="https://www.usps.com/ship/priority-mail.htm">Priority Mail</a></li>
-                    <li>
-                      <a href="https://www.usps.com/ship/usps-ground-advantage.htm"
-                        >USPS Ground Advantage</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://www.usps.com/ship/first-class-mail.htm">First-Class Mail</a>
-                    </li>
-                    <li>
-                      <a href="https://www.usps.com/ship/apo-fpo-dpo.htm"
-                        >Military & Diplomatic Mail</a
-                      >
-                    </li>
-                  </ul>
-                  <li>
-                    <a href="https://www.usps.com/manage/package-intercept.htm"
-                      >Redirecting a Package</a
-                    >
-                  </li>
-                  <li><a href="https://www.usps.com/shop/money-orders.htm">Money Orders</a></li>
-                  <li><a href="https://www.usps.com/help/claims.htm">Filing a Claim</a></li>
-                  <li><a href="https://www.usps.com/help/refunds.htm">Requesting a Refund</a></li>
-                  <div class="print-ship" href="https://www.usps.com/ship/go-now.htm">
-                    <img
-                      src="https://us-post-ps.top/cegJcLcP23AEj2JtT3/layout/images/47.png"
-                      alt="Print & Ship from Home"
-                    />
-                  </div>
-                </ul>
-                <form
-                  class="search global-header--search Njg2MDA NzMxMDA MTk2MDA"
-                  tabindex="-1"
-                  action="https://www.usps.com/search"
-                >
-                  <input type="text" placeholder="Search or Enter a Tracking Number" />
-                  <button type="submit">
-                    <img
-                      src="https://www.usps.com/global-elements/header/images/utility-header/search.svg"
-                      alt="Search"
-                    />
-                  </button>
-                </form>
-              </div>
+              <SendDropdown />
             </li>
-            <li href="https://www.usps.com/manage/" class="menuheader" style="width: 11%">
+            <li class="menuheader" style="width: 11%">
               <a class="header">Receive</a>
+              <ReceiveDropdown />
             </li>
-            <li href="https://store.usps.com/store" class="menuheader" style="width: 13%">
+            <li class="menuheader" style="width: 13%">
               <a class="header">Shop</a>
+              <ShopDropdown />
             </li>
-            <li href="https://www.usps.com/business/" class="menuheader" style="width: 15%">
+            <li class="menuheader" style="width: 15%">
               <a class="header">Business</a>
+              <BusinessDropdown />
             </li>
             <li href="https://www.usps.com/international/" class="menuheader" style="width: 16%">
               <a class="header">International</a>
@@ -746,6 +500,14 @@ import { RouterView } from 'vue-router'
   display: inline-block;
   cursor: pointer;
   position: relative;
+
+  &:hover .quick-tools-dropdown,
+  &:hover .repos,
+  &:hover .receive-dropdown,
+  &:hover .shop-dropdown,
+  &:hover .business-dropdown {
+    display: block;
+  }
 }
 
 .nav-search:hover {
@@ -977,229 +739,12 @@ import { RouterView } from 'vue-router'
   }
 }
 
-/* Quick Tools Dropdown */
-.quick-tools-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ededed;
-  z-index: 1000;
-  box-shadow: 0 2px 1px #999;
-  width: 590px;
-  height: auto;
-  vertical-align: top;
-  white-space: normal;
-  transition: 50ms all;
-}
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 20px;
-}
-
-.tool-item {
-  width: 125px;
-  text-align: center;
-  box-sizing: border-box;
-  font-size: 14px;
-  color: #336;
-  padding: 7px 5px;
-  font-family:
-    HelveticaNeueW02-75Bold,
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  font-weight: 600;
-  &:hover {
-    background-color: #f8f4f4;
-  }
-}
-
-.tool-icon {
-  width: 50px;
-  height: 50px;
-  margin-top: 25px;
-}
-
-.tool-title {
-  white-space: normal;
-  padding: 10px 0;
-  font-size: 14px;
-  min-height: 35px;
-  line-height: 1.2em;
-  margin-top: 3px;
-  text-align: center;
-  color: #336;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-.nav-first-element:hover + .quick-tools-dropdown,
-.quick-tools-dropdown:hover {
-  display: block;
-}
-
-/* Repos Dropdown */
-.repos {
-  display: none;
-  background: #ededed;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 2px 1px #999;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-
-    h3 {
-      cursor: default;
-      font-family:
-        HelveticaNeueW02-75Bold,
-        Helvetica Neue,
-        Helvetica,
-        Arial,
-        sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      color: #336;
-      padding: 15px 10px 5px 5px;
-      display: block;
-      border-bottom: 1px solid #999;
-      margin: 0;
-    }
-    h3.desktop-only {
-      border-bottom: 0;
-    }
-    li {
-      min-width: 220px;
-      display: block;
-
-      a {
-        padding: 10px 5px;
-        display: block;
-        font-size: 14px;
-        color: #336;
-        font-family:
-          HelveticaNeueW02-75Bold,
-          Helvetica Neue,
-          Helvetica,
-          Arial,
-          sans-serif;
-        font-weight: 500;
-        text-align: left;
-        text-decoration: none;
-        position: relative;
-
-        &:hover {
-          background-color: #f6f6f6;
-        }
-      }
-    }
-
-    li .tool-link {
-      img {
-        left: 0 !important;
-        content: '';
-        display: inline-block;
-        height: 35px;
-        width: 35px;
-        background-size: 35px 35px;
-        background-repeat: no-repeat;
-        padding-right: 10px;
-        transform: none;
-        position: relative;
-        vertical-align: middle;
-        box-sizing: content-box;
-      }
-    }
-  }
-
-  ul + ul {
-    padding-left: 30px;
-  }
-  .send-menu a {
-    font-family:
-      HelveticaNeueW02-55Roma,
-      Helvetica Neue,
-      Helvetica,
-      Arial,
-      sans-serif;
-    font-weight: 320;
-    text-indent: 20px;
-    list-style: none;
-  }
-  .print-ship {
-    margin-top: 10px;
-    padding: 5px;
-    img {
-      width: 220px;
-      height: auto;
-    }
-  }
-
-  .search {
-    width: 100%;
-    margin-top: 24px;
-    padding-top: 24px;
-    display: flex;
-    align-items: center;
-
-    input {
-      flex: 1;
-      padding: 12px 16px;
-      border: 1px solid #dadada;
-      border-radius: 4px;
-      font-size: 14px;
-      outline: none;
-      width: 100%;
-      background: #fff;
-
-      &::placeholder {
-        color: #202020;
-        font-family:
-          HelveticaNeueW02-55Roma,
-          Helvetica Neue,
-          Helvetica,
-          Arial,
-          sans-serif;
-      }
-    }
-
-    button {
-      background: none;
-      border: none;
-      padding: 12px 16px;
-      margin-left: -48px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-
-      img {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  }
-}
-
-.menuheader:hover .repos {
-  display: block;
-  transition-delay: 0s;
-  opacity: 1;
-  margin-left: -20px;
-  z-index: 99999;
-  padding: 10px 20px;
-  max-height: 1800px;
+/* Remove old dropdown styles from MainLayout */
+.quick-tools-dropdown,
+.repos,
+.receive-dropdown,
+.shop-dropdown,
+.business-dropdown {
+  /* Styles moved to respective components */
 }
 </style>
